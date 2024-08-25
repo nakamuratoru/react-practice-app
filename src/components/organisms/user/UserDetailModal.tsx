@@ -6,7 +6,7 @@ import { User } from "../../../types/api/user";
 type Props = {
     isOpen: boolean;
     onClose: () => void;
-    user: User;
+    user: User | null;
 };
 
 export const UserDetailModal: VFC<Props> = memo((props) => {
@@ -21,19 +21,19 @@ export const UserDetailModal: VFC<Props> = memo((props) => {
                     <Stack spacing={4}>
                         <FormControl>
                             <FormLabel>name</FormLabel>
-                            <Input value={user.username} isReadOnly />
+                            <Input value={user?.username} isReadOnly />
                         </FormControl>
                         <FormControl>
                             <FormLabel>full name</FormLabel>
-                            <Input value={user.name} isReadOnly />
+                            <Input value={user?.name} isReadOnly />
                         </FormControl>
                         <FormControl>
                             <FormLabel>mail</FormLabel>
-                            <Input value={user.email} isReadOnly />
+                            <Input value={user?.email} isReadOnly />
                         </FormControl>
                         <FormControl>
                             <FormLabel>TEL</FormLabel>
-                            <Input value={user.phone} isReadOnly />
+                            <Input value={user?.phone} isReadOnly />
                         </FormControl>
                     </Stack>
                 </ModalBody>
