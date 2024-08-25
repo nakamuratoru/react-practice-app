@@ -7,7 +7,7 @@ type Props = {
     onOpen: () => void;
 };
 
-export const MenuIconButton: VFC<Props> = memo((props) => {
+export const MenuIconButton: VFC<Props> =(props) => {
     const { onOpen } = props;
     return (
         <IconButton 
@@ -19,4 +19,4 @@ export const MenuIconButton: VFC<Props> = memo((props) => {
             onClick={onOpen}
         />
     );
-});
+};
